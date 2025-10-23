@@ -4,7 +4,7 @@ import psycopg2
 
 app = FastAPI()
 model = SentenceTransformer("all-MiniLM-L6-v2")
-conn = psycopg2.connect('postgresql://neondb_owner:npg_AMtQ8hO1blCf@ep-noisy-frost-afpa7316-pooler.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require&options=endpoint%3Dep-noisy-frost-afpa7316')
+conn = psycopg2.connect('postgresql://neondb_owner:***********@ep-noisy-frost-afpa7316-pooler.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require&options=endpoint%3Dep-noisy-frost-afpa7316')
 
 @app.get('/search')
 def search(q: str):
